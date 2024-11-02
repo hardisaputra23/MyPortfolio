@@ -1,0 +1,16 @@
+body {
+    background: url('../img/blockchain.jpeg') no-repeat center;
+    background-size: 100%;
+    background-position: top;
+    margin:  0;
+}
+.sidebar {
+    height: 100vh; /* Tinggi sidebar memenuhi viewport */
+    background-color: #458ddf; /* Warna latar belakang sidebar */
+}
+.sidebar a {
+    color: #ffffff; /* Warna teks di sidebar */
+}
+.sidebar.hidden {
+    display: none; /* Menyembunyikan sidebar saat kelas hidden ditambahkan */
+}
