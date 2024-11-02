@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css"> <!-- Pastikan nama file CSS sesuai -->
+    <style>
+        /* Gaya untuk sidebar */
+        .sidebar {
+            height: 100vh; /* Tinggi sidebar memenuhi viewport */
+            background-color: #343a40; /* Warna latar belakang sidebar */
+        }
+        .sidebar a {
+            color: #fff; /* Warna teks di sidebar */
+        }
+        .sidebar.hidden {
+            display: none; /* Menyembunyikan sidebar saat kelas hidden ditambahkan */
+        }
+        /* Gaya untuk header yang tetap */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1020; /* Pastikan di atas konten lain */
+        }
+    </style>
+</head>
+<body>
+    <!-- <header class="sticky-header py-1 bg-secondary">
+        <div class="container-fluid">
+            <h1 class="display-5 text-center text-white">MY PORTFOLIO</h1>
+            <p class="text-center text-white fs-6">Ini adalah proyek pertama saya</p>
+        </div>
+    </header> -->
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-sm-2 sidebar p-3">
+                <h4 class="text-white">Sidebar</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Konten Utama -->
+            <div class="col-sm-10">
+                <button id="toggleSidebar" class="btn btn-warning mb-3">Toggle Sidebar</button>
+                <div class="bg-secondary p-2 rounded">
+                    <img class="w-100" src="../img/blockchain.jpeg" alt="blockchain">
+                    <p class="text-center text-white">Ini adalah saya</p>
+                </div>
+                <!-- Konten tambahan untuk memungkinkan scrolling -->
+                <div style="height: 1500px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript untuk toggle sidebar
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('hidden'); // Menambah atau menghapus kelas 'hidden'
+        });
+    </script>
+</body>
+</html>
